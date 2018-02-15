@@ -34,7 +34,7 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li><a href="/">Home</a></li>
-            <li><a href="about">About This Data Set</a></li>
+            <li><a href="about">Data Accountability</a></li>
 	    <li  class="active"><a href="quality">Data Quality</a></li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -45,28 +45,47 @@
 
       <!-- Main jumbotron for a primary marketing message or call to action -->
       <div class="jumbotron">
-	<h1>Quality: About This Data Set</h1>
-        <p>Write a brief summary about the quality of the data set here</a></p>
+	  <h1>Quality: About This Data Set</h1>
+        <p><strong>Completeness: </strong>Even there are some missing data in this data set, but they are less than 1%. Thus, this data set has a good completeness.</p>
+        <p><strong>Coherence:</strong> The data make sense relative to itself. Outliers are explainable and reasonable. And the PM2.5 values have a meaningful distribution.</p>
+        <p><strong>Correctness:</strong> This data set is reliable.</p>
       </div>
 
     
       <div class="page-header">
 	<h2>Is the data complete?</h2>
-	<p>If not, what is missing and what concerns does it raise?
-	What is your evidence for this?</p>
+	<h3>The trend of PM2.5 of the five main cities in China during 2013 to 2015 can be shown by the chosen data set. However, as shown in Figure 1, there are still some missing data.</h3>
+	<h3>But the missing data only take a tiny part of the whole data set, they would not cause a significant effect on the analysis. There might be several reasons for the missing data, like broken devices, incorrect recordings, etc., but the real causes are unclear.</h3>
+	<div style="text-align:center">
+	<iframe width="700" height="300" scrolling="no" frameborder="no" src="https://fusiontables.google.com/embedviz?containerId=googft-gviz-canvas&amp;q=select+col0%2C+col3+from+1L9qU43k120hX8Q4Yj5Y-xYfy_RQcQyADvIADKiRA+order+by+col0+asc+limit+10&amp;viz=GVIZ&amp;t=COLUMN&amp;uiversion=2&amp;gco_forceIFrame=true&amp;gco_hasLabelsColumn=true&amp;gco_vAxes=%5B%7B%22title%22%3Anull%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%7D%2C%7B%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%7D%5D&amp;gco_useFirstColumnAsDomain=true&amp;gco_legacyScatterChartLabels=true&amp;gco_isStacked=false&amp;gco_booleanRole=certainty&amp;gco_hAxis=%7B%22useFormatFromData%22%3Atrue%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22viewWindow%22%3Anull%2C+%22viewWindowMode%22%3Anull%7D&amp;gco_legend=right&amp;gco_series=%7B%220%22%3A%7B%22color%22%3A%22%23cccccc%22%7D%7D&amp;width=700&amp;height=300"></iframe>
+	<p>Figure 1. Missing rate</p>
+	</div>
       </div>
       
-      <div class="page-header">
+    <div class="page-header">
 	<h2>Is the data coherent?</h2>
-	<p>Does it make sense relative to itself? Does it match your
-	expectations? Are the distributions sensible? What is your
-	evidence for this?</p>
-      </div>
+	<h3>All the PM2.5 values in the data set are numbers, which are meaningful data.</h3>
+	<h3>Figure 2 shows the boxplots of the PM2.5 values. But there seems to be too many outliers, which goes beyond my expectations. Thus, when I checked these outliers by comparing these outliers with real reports from 
+	<a href="http://www.cma.gov.cn">China Meteorological Administration</a>, which is the authoritative organization in China, they are consistent. That made me realize that 
+	these outliers might be caused by the degradation of environment. And the fact that these outliers are all distributed above the average value verified it.</h3>
+	<h3>Histograms in Figure 3 show that PM2.5 values of each city have the similar distribution, which make sense.</h3>
+	  <div style="text-align:center">
+      <img src="https://drive.google.com/thumbnail?id=1T6nQQqIpdewo-VoLaB93LA0iX01RVckf" width="500" height="200" alt="Boxplots" />
+      <p> Figure 2. Boxplots of the PM2.5 values</p>
+	  </div>
+	  
+	  <div style="text-align:center">
+	  <img src="https://drive.google.com/thumbnail?id=1vgMUqJqYHj4w8Ub7_10TzIt3tmIv4IpI" width="600" height="200" alt="Histograms" />
+	  <p> Figure 3. Histograms of the PM2.5 values</p>
+	  <p> Left to right: Beijing, Shanghai, Shenzhen, Guangzhou, Chengdu </p>
+	  </div>
+	</div>
 
       <div class="page-header">
-	<h2>Is the data correct?</h2>
-	<p>What aspects of this data can you verify? How did you do so? What did
-	you find?</p>
+	  <h2>Is the data correct?</h2>
+	  <h3>Since the data set comes from <a href="https://archive.ics.uci.edu/ml/index.php">UCI Machine Learning Repository</a>, it should be solid and realiable.</h3>
+      <h3>Look into the data, however, the values of PM2.5 are all integers, so they might be reported in round numbers. And there is no way to check whether the measurement of the data is right or not. 30 random values were chosen and compared to <a href="http://www.cma.gov.cn">China Meteorological Administration</a> to verify their correctness, and they are consistent.</h3>
+      <p>In my opinion, it is hard for us to verify the data from the very begining like how it is collected and cleaning in the real world, especially when the data set is large. Thus, what we can do is to find the most trustful data set.</p>
       </div>
 
     </div> <!-- /container -->

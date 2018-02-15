@@ -35,7 +35,7 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li><a href="/">Home</a></li>
-            <li  class="active"><a href="about">About This Data Set</a></li>
+            <li  class="active"><a href="about">Data Accountability</a></li>
 	    <li><a href="quality">Data Quality</a></li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -46,19 +46,23 @@
 
       <!-- Main jumbotron for a primary marketing message or call to action -->
       <div class="jumbotron">
-	<h1>Accountability: About This Data Set</h1>
-        <p>Write a brief summary about the data set here</a></p>
+	  <h1>Accountability: About This Data Set</h1>
+        <h3>This data set is <b><a href="https://archive.ics.uci.edu/ml/datasets/PM2.5+Data+of+Five+Chinese+Cities#">the PM2.5 Data of Five Chinese Cities Data Set</a></b>. This data set contains time series data for hourly PM2.5 data in Beijing, Shanghai, Guangzhou, Chengdu and Shenyang, which are five main cities in China.</h3>
+
       </div>
 
     
       <div class="page-header">
 	<h2>Where did this data come from?</h2>
-	<p>fill in</p>
+	<h3>This data set comes from <a href="https://archive.ics.uci.edu/ml/index.php">UCI Machine Learning Repository</a>, which is a open collection of databases, domain theories, and data generators with a high reputation for high-quality data.</h3>
+	<h3>There are five separate original data sets, each for one main city in China. After being downloaded from the original source, these five data sets were cleaned up according to the following steps:</h3>
+	<h3>- 1. Since specifically, we want to explore the trend of PM2.5 at 8 a.m. in China, the irrelevant data like Cumulated Hours of Rain, Temperature, etc. were deleted at first. Only the potentially useful data, i.e., date data, season data and PM2.5 data of US Embassy in each data set were reserved.</h3>
+    <h3>- 2. Then the five data sets were combined into the integrated data set as shown on the <a href="/">Home</a> page.</h3>
       </div>
       
       <div class="page-header">
 	<h2>Who has access to it?</h2>
-	<p>fill in</p>
+	<h3>It is a public repository with transparency. Anyone can download it from <a href="https://archive.ics.uci.edu/ml/datasets/PM2.5+Data+of+Five+Chinese+Cities#">here</a>, but only people with premission can modify it.</h3>
       </div>
 
 
